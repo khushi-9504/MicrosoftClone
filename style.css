@@ -126,6 +126,71 @@
   }
 }
 
+.showcase {
+  width: auto;
+  background: url(images/hero-image.avif) no-repeat top center/cover;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  box-sizing: content-box !important;
+  position: relative;
+}
+
+.showcase img.hero-img-responsive {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  width: 40%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+  margin: 3rem;
+}
+
+.content p {
+  line-height: 1.5rem;
+}
+
+.content button {
+  align-self: flex-start;
+  text-align: left;
+  background-color: var(--primary-button-primary-color);
+  color: white;
+  font-weight: bold;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .showcase {
+    background: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .showcase img.hero-img-responsive {
+    display: block;
+    width: 100%;
+  }
+
+  .content {
+    width: 100%;
+    margin: 1rem 0 3rem 0;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    top: -3rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+}
+
 /* Devices */
 .devices{
   margin: 4rem auto;
@@ -229,83 +294,124 @@
   top: 0rem;
 }
 
-/* Hero Image */
-
-.hero-container2{
-  width: 100%;
-  overflow: hidden;
-}
-
-.hero-image2{
-  position: relative;
-  width: 100%;
-}
-
-.hero-image2 img{
-  width: 100%;
-  object-fit: contain;
-}
-
 /* Game Pass */
 
-.game-pass-container {
-  position: relative;
-  width: auto;
-  padding: 0 4rem;
-}
-
-.game-pass-container img {
+.xbox-container {
   width: 100%;
+  max-width: 1400px;
   height: auto;
-  display: block;
-}
-
-.left-part {
-  position: absolute;
-  top: 10rem;
-  left: 12rem;
-  color: white;
-  max-width: 400px;
-  z-index: 1;
-}
-
-.left-part h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
-
-.left-part p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.buttons {
+  background: none;
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  align-items: stretch;
+  margin: 4rem;
+  position: relative;
+  box-sizing: border-box;
 }
 
-.card-btn {
-  background-color: #0067b8;
-  color: white;
-  padding: 0.6rem 1.2rem;
+.xbox-container img.hero-img-responsive {
+  display: block;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+  order: 2;
+  position: relative;
+  right: 0;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
   border: none;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
+}
+
+.xbox-content {
+  width: 50%;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 3rem;
+  padding-left: 4rem;
+  margin: 0;
+  box-sizing: border-box;
+  order: 1;
+  position: relative;
+}
+
+.xbox-content p {
+  line-height: 1.5rem;
+}
+
+.xbox-content .xbox-buttons {
+  display: flex;
+  gap: 1rem;
 }
 
 .video-button {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  color: white;
+  gap: 0.3rem;
+}
+
+.video-button:hover {
   cursor: pointer;
 }
 
-.video-button img{
-  width: 25px;
+.video-button img {
+  width: 15%;
+}
+
+.xbox-buttons button {
+  align-self: flex-start;
+  text-align: left;
+  background-color: var(--primary-button-primary-color);
+  color: white;
+  font-weight: bold;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.xbox-buttons button:hover {
+  background-color: var(--primary-button-hover-color);
+}
+
+@media (max-width: 1024px) {
+  .xbox-container {
+    background: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .xbox-container img.hero-img-responsive {
+    display: block;
+    width: 100%;
+    min-height: 70%;
+    order: 0;
+    position: static;
+    right: 0;
+    z-index: auto;
+  }
+
+  .xbox-content {
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem;
+    background-color: white;
+    color: black;
+    position: relative;
+    top: -3rem;
+    box-shadow: var(--shadow);
+    box-sizing: border-box;
+    order: 1;
+    padding-right: 0;
+  }
 }
 
 /* For Business */

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      xbox-content="width=device-width, initial-scale=1.0"
+    />
+    <title>Hero Image</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-button-hover-color: #005ca5;
+        --primary-button-primary-color: #0067b8;
+      }
+
+      .xbox-container {
+        width: 100%;
+        max-width: 1400px;
+        height: auto;
+        background: none;
+        display: flex;
+        align-items: stretch;
+        margin: 4rem;
+        position: relative;
+        box-sizing: border-box;
+      }
+
+      .xbox-container img.hero-img-responsive {
+        display: block;
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+        box-sizing: border-box;
+        order: 2;
+        position: relative;
+        right: 0;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+
+      .xbox-content {
+        width: 50%;
+        color: white;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 3rem;
+        padding-left: 4rem;
+        margin: 0;
+        box-sizing: border-box;
+        order: 1;
+        position: relative;
+      }
+
+      .xbox-content p {
+        line-height: 1.5rem;
+      }
+
+      .xbox-content .xbox-buttons {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .video-button {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+      }
+
+      .video-button:hover {
+        cursor: pointer;
+      }
+
+      .video-button img {
+        width: 15%;
+      }
+
+      .xbox-buttons button {
+        align-self: flex-start;
+        text-align: left;
+        background-color: var(--primary-button-primary-color);
+        color: white;
+        font-weight: bold;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .xbox-buttons button:hover {
+        background-color: var(--primary-button-hover-color);
+      }
+
+      @media (max-width: 1024px) {
+        .xbox-container {
+          background: none;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          max-width: 100%;
+          margin: 0;
+        }
+
+        .xbox-container img.hero-img-responsive {
+          display: block;
+          width: 100%;
+          min-height: 70%;
+          order: 0;
+          position: static;
+          right: 0;
+          z-index: auto;
+        }
+
+        .xbox-content {
+          width: 100%;
+          margin: 0;
+          padding: 1.5rem;
+          background-color: white;
+          color: black;
+          position: relative;
+          top: -3rem;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          box-sizing: border-box;
+          order: 1;
+          padding-right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="xbox-container">
+      <img
+        src="images/game-pass-img.png"
+        alt="Hero Image"
+        class="hero-img-responsive"
+      />
+      <div class="xbox-content">
+        <h2>Xbox Game Pass Ultimate</h2>
+        <p>
+          Play new titles on day one. Enjoy hundreds of high-quality games with
+          friends on console, PC, or cloud.
+        </p>
+        <div class="xbox-buttons">
+          <button>Join now</button>
+          <div class="video-button">
+            <img src="images/video-icon.png" alt="" />
+            <span>Watch the video</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
