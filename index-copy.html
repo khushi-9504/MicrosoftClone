@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Microsoft - AI, Cloud, Productivity, Computing, Gaming & Apps</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-copy.css" />
     <link rel="icon" href="images/favicon.png" type="image/png" />
   </head>
   <body>
-    <header class="header">
+    <nav class="header">
       <!-- Logo -->
       <div class="left-navbar">
         <a href="index.html" class="logo">
@@ -70,7 +70,7 @@
         <li><a href="#">Cart</a></li>
         <li><a href="#">User</a></li>
       </ul>
-    </header>
+    </nav>
 
     <main>
       <header class="showcase">
@@ -165,7 +165,7 @@
         <img
           src="images/game-pass-img.png"
           alt="Hero Image"
-          class="hero-img-responsive"
+          class="xbox-img-responsive"
         />
         <div class="xbox-content">
           <h2>Xbox Game Pass Ultimate</h2>
@@ -386,6 +386,20 @@
         document.body.style.overflow = mobileMenu.classList.contains("open")
           ? "hidden"
           : "auto";
+      });
+
+      // Back to Top button functionality
+      const backToTopBtn = document.querySelector(".scroll-button");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          backToTopBtn.style.display = "block";
+        } else {
+          backToTopBtn.style.display = "none";
+        }
+      });
+
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
       });
     </script>
   </body>
